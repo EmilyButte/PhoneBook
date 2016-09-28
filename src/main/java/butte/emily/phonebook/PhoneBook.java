@@ -1,6 +1,7 @@
 package butte.emily.phonebook;
 
 import java.util.HashMap;
+import java.util.Set;
 
 public class PhoneBook {
 
@@ -8,16 +9,11 @@ public class PhoneBook {
     private String phoneNumber;
     private String newEntry;
     private String removedEntry;
-    private String list;
+    private Set<String> list;
 
     public HashMap<String, String> listing = new HashMap<String, String>();
 
-    public PhoneBook(String name, String phoneNumber) {
-        this.name = name;
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String lookUp(String name) {
+    public void lookUp(String name) {
         System.out.println(listing.get(name));
     }
 
@@ -25,12 +21,13 @@ public class PhoneBook {
          newEntry = listing.put(name, phoneNumber);
     }
 
-    public void removeEntry() {
+    public String removeEntry(String name) {
         removedEntry = listing.remove(name);
+        return removedEntry;
     }
 
-    public String listEntries() {
+    public Set listEntries() {
         list = listing.keySet();
-
+        return list;
     }
 }

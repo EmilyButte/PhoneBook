@@ -11,7 +11,7 @@ import java.util.HashMap;
  */
 public class PhoneBookTest {
 
-    PhoneBook phoneBook = new PhoneBook("Emily Butte", "(701) 371-7515");
+    PhoneBook phoneBook = new PhoneBook();
 
 
     @Test
