@@ -1,1 +1,13 @@
+<<<<<<< HEAD
 .idea
+=======
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+>>>>>>> 1d8550173079a49b193c9cf50fba62bb62ebe4ef
