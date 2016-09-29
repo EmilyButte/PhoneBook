@@ -1,33 +1,34 @@
 package butte.emily.phonebook;
 
 import java.util.HashMap;
-import java.util.Set;
 
 public class PhoneBook {
 
-    private String name;
-    private String phoneNumber;
-    private String newEntry;
-    private String removedEntry;
-    private Set<String> list;
-
     public HashMap<String, String> listing = new HashMap<String, String>();
 
+    public String name;
+    public String phoneNumber;
+
+
     public void lookUp(String name) {
-        System.out.println(listing.get(name));
+        System.out.println("Phone number: " + listing.get(name));
     }
 
     public void addEntry(String name, String phoneNumber) {
-         newEntry = listing.put(name, phoneNumber);
+        listing.put(name, phoneNumber);
     }
 
-    public String removeEntry(String name) {
-        removedEntry = listing.remove(name);
-        return removedEntry;
+    public void removeEntry(String name) {
+        listing.remove(name);
     }
 
-    public Set listEntries() {
-        list = listing.keySet();
-        return list;
+    public void listEntries() {
+        System.out.println(listing.keySet());
     }
+
+//    public String reverseLookUp(){
+//        return name;
+//
+//    }
+
 }

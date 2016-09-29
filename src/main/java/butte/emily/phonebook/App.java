@@ -15,11 +15,13 @@ public class App {
         phoneBook.listing.put("Frank Reynolds", "(215) 897-5555");
         phoneBook.listing.put("Waitress", "(215) 555-5555");
 
-        System.out.println(phoneBook.listEntries());
+        phoneBook.listEntries();
         phoneBook.lookUp("Charlie Day");
         phoneBook.addEntry("Emily Butte", "(701) 371-7515");
         phoneBook.removeEntry("Dennis Reynolds");
-        System.out.println(phoneBook.listEntries());
+        phoneBook.listEntries();
+        //System.out.println(phoneBook.reverseLookUp("(215) 555-5555"));
+
 
     }
 }
