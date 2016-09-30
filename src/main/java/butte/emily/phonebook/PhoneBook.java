@@ -4,31 +4,36 @@ import java.util.HashMap;
 
 public class PhoneBook {
 
-    public HashMap<String, String> listing = new HashMap<String, String>();
+    public HashMap<String, String> phonebook = new HashMap<String, String>();
 
-    public String name;
-    public String phoneNumber;
 
+    public int size() {
+        int size = phonebook.size();
+        return size;
+    }
 
     public void lookUp(String name) {
-        System.out.println("Phone number: " + listing.get(name));
+        System.out.println(name + "'s Phone number is: " + phonebook.get(name));
     }
 
     public void addEntry(String name, String phoneNumber) {
-        listing.put(name, phoneNumber);
+        phonebook.put(name, phoneNumber);
     }
 
     public void removeEntry(String name) {
-        listing.remove(name);
+        phonebook.remove(name);
     }
 
     public void listEntries() {
-        System.out.println(listing.keySet());
+        System.out.println(phonebook.entrySet());
     }
 
-//    public String reverseLookUp(){
-//        return name;
-//
-//    }
-
+    public void reverseLookUp(String phoneNumber) {
+        for (String s : phonebook.keySet()) {
+            if (phonebook.keySet().equals(s)) {
+                System.out.println(phonebook.keySet());
+            }
+        }
+    }
 }
+
